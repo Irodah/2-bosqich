@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head> 
+<body>
+    <div class="container">
+        <div class="row">
+            <header>
+                <h2>devfinder</h2>
+                <img src="img/img1.png" alt="">
+            </header>
+            <input type="text" class="search">
+            <button class="send">Search</button>
+            <div class="content">
+                <div class="left__content">
+                    <img src="img/Bitmap.png" alt="">
+                </div>
+                <div class="right">
+                    <p class="name"></p>
+                    <p class="company"></p>
+                    <p class="blog"></p>
+                    <p class="location"></p>
+                    <p class="email"></p>
+                    <p class="hireable"></p>
+                    <p class="bio"></p>
+                    <p class="twitter_username"></p>
+                    <p class="public_repos"></p>
+                    <p class="public_gists"></p>
+                    <p class="followers"></p>
+                    <p class="following"></p>
+                    <p class="created_at"></p>
+                    <p class="updated_at"></p>
+                </div>
+            </div>
+            
+            
+         
+           
+        </div>
+    </div>
+    <script>
+let div = document.querySelector('.name')
+let id = document.querySelector('.company')
+let tovarId = document.querySelector('.blog')
+let nomi = document.querySelector('.location')
+let miqdor = document.querySelector('.email')
+let narx = document.querySelector('.hireable')
+let summa = document.querySelector('.bio')
+let fish = document.querySelector('.twitter_username')
+let vaqt = document.querySelector('.public_repos')
+let vaqt1 = document.querySelector('.public_gists')
+let vaqt2 = document.querySelector('.followers')
+let vaqt3 = document.querySelector('.following')
+let vaqt4 = document.querySelector('.created_at')
+let vaqt5 = document.querySelector('.updated_at')
+let search = document.querySelector('.search')
+let send = document.querySelector('.send')
+
+
+
+
+
+const request = new XMLHttpRequest()
+request.open('GET', 'octocat.json')
+request.setRequestHeader('Content-type', 'application/json')
+request.send()
+    request.addEventListener('load',
+     function(){
+        const data = JSON.parse(request.response)
+            div.innerHTML = data.name + '<br>'
+            id.innerHTML = data.company + '<br>'
+            tovarId.innerHTML = data.blog + '<br>'
+            nomi.innerHTML = data.location + '<br>'
+            miqdor.innerHTML = data.email + '<br>'
+            narx.innerHTML =  data.hireable + '<br>'
+            summa.innerHTML = data.bio + '<br>'
+            fish.innerHTML =  data.twitter_username + '<br>'
+            vaqt.innerHTML = data.public_repos + '<br>'
+            vaqt1.innerHTML = data.public_gists + '<br>'
+            vaqt2.innerHTML = data.followers + '<br>'
+            vaqt3.innerHTML = data.following + '<br>'
+            vaqt4.innerHTML = data.created_at + '<br>'
+            vaqt5.innerHTML = data.updated_at + '<br>'
+
+            id.innerHTML = data.name + '<br>'
+                            tovarId.innerHTML = data.compaty + '<br>'
+                            nomi.innerHTML = data.blog + '<br>'
+                            miqdor.innerHTML = data.location + '<br>'
+                            narx.innerHTML = data.public_repos + '<br>'
+                            summa.innerHTML = data.public_gists + '<br>'
+                            fish.innerHTML = data.followers + '<br>'
+                            vaqt.innerHTML = data.following + '<br>'
+            console.log(nomi);
+
+            
+    })
+    
+    function o() {
+        if(search.innerHTML !== data) {
+                search.innerHTML = 'noresults'
+            }
+    }
+    </script>
+</body>
+</html>

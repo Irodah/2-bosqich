@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "SpaceMono-Bold";
+    src: url(font/SpaceMono-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "SpaceMono-Bold-Reg";
+    src: url(font/SpaceMono-Regular.ttf) format("truetype");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SpaceMono-Bold";
+    // transition: all .3s;
+}
+.container{
+    width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 80px;
+    // width: 200px;
+    // height: auto;
+    background-color: #141D2F;
+    // background-image: url(img/naqsh.png), url(img/right-boll.png);
+    // background-repeat: no-repeat;
+    // background-position: left 133px, right 1045px;
+
+    
+    .row {
+        p {
+            color: white;
+        }
+        // border: 1px solid red;
+        header {
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            img {
+                width: 100px;
+            }
+        }
+        input{
+            margin-top: 20px;
+            border: none;
+            width: 400px;
+            height: 40px;
+            background: #1E2A47;
+
+        }
+        .send {
+            padding: 10px;
+            background: #0079FF;
+            font-family: Space Mono;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 10px;
+            // font-weight: 700;
+            // line-height: 24px;
+            border: none;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+        .content {
+            border-radius: 20px;
+            background: #1E2A47;
+            display: flex;
+            padding: 40px;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+    }
+}
